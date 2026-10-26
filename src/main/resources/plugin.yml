@@ -1,0 +1,33 @@
+name: SpawnBots
+version: '2.2.0'
+main: dev.spawnbots.SpawnBotsPlugin
+api-version: '26.3'
+description: Controllable fake players with skins, persistent inventories, equipment GUIs, teleportation, and diagnostics.
+commands:
+  bot:
+    usage: /<command> player <Name> | /<command> equip [Name] | /<command> log | /<command> <Name> <attack|mine|eat|stop|undying|dying|tp>
+permissions:
+  spawnbots.*:
+    description: Grants every SpawnBots command.
+    default: op
+    children:
+      spawnbots.spawn: true
+      spawnbots.equip: true
+      spawnbots.attack: true
+      spawnbots.mine: true
+      spawnbots.eat: true
+      spawnbots.stop: true
+      spawnbots.undying: true
+      spawnbots.dying: true
+      spawnbots.tp: true
+      spawnbots.log: true
+  spawnbots.spawn: {description: Use /bot player., default: op}
+  spawnbots.equip: {description: Use /bot equip., default: op}
+  spawnbots.attack: {description: Use attack., default: op}
+  spawnbots.mine: {description: Use mine., default: op}
+  spawnbots.eat: {description: Use eat., default: op}
+  spawnbots.stop: {description: Use stop., default: op}
+  spawnbots.undying: {description: Use undying., default: op}
+  spawnbots.dying: {description: Use dying., default: op}
+  spawnbots.tp: {description: Use tp., default: op}
+  spawnbots.log: {description: Use /bot log., default: op}
